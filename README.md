@@ -39,11 +39,9 @@ $env:PYTHONPATH="C:\Chemin\Vers\Le Dossier\Du Repo\Projet-TDD\my-app\amplify"; p
 
 ```sh
 cd my-app
+npm install
 ```
 
-```sh
-py -m venv .venv
-```
 WINDOWS :
 ```sh
 .\.venv\Scripts\activate
@@ -62,6 +60,7 @@ pip install pytest
 
 ```sh
 cd amplify
+amplify init
 ```
 
 #### Changer \Chemin\Vers\Le Dossier\Du Repo\ par le chemin du dossier ou se trouve le clone du repo
@@ -70,3 +69,6 @@ cd amplify
 $env:PYTHONPATH="C:\Chemin\Vers\Le Dossier\Du Repo\Projet-TDD\my-app\amplify"; pytest -v
 ```
 
+```sh
+amplify push
+```
