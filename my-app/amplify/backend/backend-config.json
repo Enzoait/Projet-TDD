@@ -2,11 +2,43 @@
   "function": {
     "userHandler": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "userTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "userHandlerPost": {
+      "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
+    "AMPLIFY_function_userHandlerPost_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userHandlerPost"
+        }
+      ]
+    },
+    "AMPLIFY_function_userHandlerPost_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userHandlerPost"
+        }
+      ]
+    },
     "AMPLIFY_function_userHandler_deploymentBucketName": {
       "usedBy": [
         {
